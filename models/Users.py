@@ -4,7 +4,6 @@ from sqlalchemy import Sequence
 
 # table
 class Users(db.Model):
-
     __bind_key__ = 'db'
 
     #primary key id
