@@ -9,7 +9,7 @@ def init_app(app):
     app.config['SQLALCHEMY_BINDS'] = {
         'db': "sqlite:///luckyleafplants_.sqlite"
     }
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///luckleafplants_.sqlite'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///luckyleafplants_.sqlite'
 
     db.init_app(app)
     app.logger.info('Initialized models')
@@ -21,6 +21,7 @@ def init_app(app):
         from .orders import Orders
         from .orderItems import OrderItems
         from .careInstructions import CareInstructions
+
         db.create_all()
         db.session.commit()
         app.logger.debug('All tables are created')
