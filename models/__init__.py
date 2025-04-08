@@ -15,9 +15,13 @@ def init_app(app):
     app.logger.info('Initialized models')
 
     with app.app_context():
-        from .Users import Users
-        from .Products import Products
-        from .PlantTypes import PlantTypes
-        from .Orders import Orders
-        from .OrderItems import OrderItems
+        from .users import Users
+        from .products import Products
+        from .planttypes import PlantTypes
+        from .orders import Orders
+        from .orderItems import OrderItems
+        from .careInstructions import CareInstructions
+        db.create_all()
+        db.session.commit()
+        app.logger.debug('All tables are created')
 

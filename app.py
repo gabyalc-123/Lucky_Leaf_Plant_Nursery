@@ -18,7 +18,7 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 @app.route('/')
 def home():
-    return "Online Pharmacy API is running!"
+    return "Online Lucky Leaf Plant Nursery API is running!"
 
 # app is called
 if __name__ == '__main__':
